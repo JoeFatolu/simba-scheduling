@@ -30,28 +30,13 @@ const EventTypesPage = (props) => {
     </div>
   );
 
-  const EventTypeListHeading = ({ profile, membershipCount }) => (
-    <div className="flex mb-4">
-      <div>
-        <Link href="/settings/teams">
-          <a className="font-bold">{profile.name}</a>
-        </Link>
-        {typeof window !== "undefined" && (
-          <Link href={profile.slug!}>
-            <a className="block text-xs text-neutral-500">{`${window.location.host}/${profile.slug}`}</a>
-          </Link>
-        )}
-      </div>
-    </div>
-  );
-
   return (
     <div>
       <Head>
         <title>Event Types | Calendso</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Shell heading="Event Types" subtitle="Create events to share for people to book on your calendar." CTA={props.eventTypes.length !== 0 && <CreateNewEventDialog canAddEvents={props.canAddEvents} profiles={props.profiles} />}>
+      <Shell heading="Event Types" subtitle="Create events to share for people to book on your calendar.">
         {props.eventTypes.length === 0 && <CreateFirstEventTypeView />}
       </Shell>
     </div>
