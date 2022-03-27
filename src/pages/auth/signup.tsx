@@ -57,9 +57,9 @@ export default function Signup() {
           <Input label="Password" id="password" placeholder="Password" name="password" type="password" value={register.values.password} onChange={register.handleChange} error={register.touched.password && Boolean(register.errors.password)} helperText={register.touched.password && register.errors.password} />
           <Button>Login</Button>
         </form>
-        <Link href="/register" passHref>
+        <Link href="/auth/login" passHref>
           <div className="mt-5 cursor-pointer">
-            Don&apos;t have yout account? <span className="font-medium">Create an account?</span>
+            Already have an account? <span className="font-medium">Login ?</span>
           </div>
         </Link>
       </div>

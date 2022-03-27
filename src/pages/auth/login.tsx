@@ -41,7 +41,7 @@ export default function Login({ csrfToken }) {
           <Input label="Password" id="password" placeholder="Password" name="password" type="password" value={signInFormik.values.password} onChange={signInFormik.handleChange} error={signInFormik.touched.password && Boolean(signInFormik.errors.password)} helperText={signInFormik.touched.password && signInFormik.errors.password} />
           <Button>Login</Button>
         </form>
-        <Link href="/register" passHref>
+        <Link href="/auth/signup" passHref>
           <div className="mt-5 cursor-pointer">
             Don&apos;t have yout account? <span className="font-medium">Create an account?</span>
           </div>
